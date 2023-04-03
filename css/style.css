@@ -1,0 +1,262 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
+:root {
+  --green: #54E6AF;
+  --bg-black: #121725;
+  --light-grey: #C2CBE5;
+  --dark-grey: #5A668A;
+  --light-black: #2C344B;
+  --btn-hover-light-green: #B3FFE2;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-black);
+}
+
+/* header */
+header {
+  position: relative;
+}
+
+.logo {
+  display: block;
+  padding: 70px 0;
+  margin: auto;
+}
+
+.bg {
+  background-image: url(./Bitcamp/podRequest/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+}
+
+/* main */
+/* main-txt-content */
+.main-txt-content {
+  width: 330px;
+  margin: auto;
+  margin-bottom: 38px;
+}
+
+.main-header {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.main-par {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--light-grey);
+}
+
+/* list-content */
+.list-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.list-content-img {
+  width: 15%;
+  height: 5%;
+}
+
+/* inputs */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input {
+  background-color: var(--light-black);
+  margin-bottom: 16px;
+  border-radius: 28px;
+  padding: 10px 30px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: 220px;
+}
+
+.submit-input {
+  padding: 10px;
+  border-radius: 28px;
+  border: none;
+  color: var(--bg-black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  background-color: var(--green);
+  width: 280px;
+}
+
+#paragraph {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FB3E3E;
+  padding-top: 10px;
+}
+
+.bg-tablet {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+/* tablet screen */
+@media screen and (min-width: 769px) {
+
+  .bg-tablet {
+    background-image: url(/Bitcamp/podRequest/tablet/image-host.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 300px 300px;
+    background-size: contain;
+    z-index: -10;
+    right: 0;
+    background-position: top right;
+  }
+
+  /* header */
+  .logo {
+    padding: 70px 40px 90px 40px;    margin: 0;
+  }
+
+  .bg {
+    display: none;
+  }
+
+  /* main */
+  main {
+    background-color: var(--bg-black);
+    width: 85%;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 90px 0 0 40px;
+  }
+
+  .main-txt-content {
+    width: 100%;
+    order: 1;
+  }
+  
+  .main-header {
+    text-align: inherit;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 30px;
+  }
+
+  .main-par {
+    text-align: inherit;
+    width: 383px;
+  }
+
+  /* list content */
+  .list-content {
+    gap: 30px;
+    justify-content: inherit;
+    margin: 0;
+    order: 3;
+  }
+
+
+  /* inputs */
+  .inputs {
+    width: 350px;
+    padding-left: 30px;
+    order: 2;
+    margin-bottom: 40px;
+  }
+
+  .inputs-form {
+    width: 100%;
+    position: relative;
+  }
+
+  .email-input {
+    width: 100%;  
+  }
+
+  .submit-input {
+    width: 170px;
+    position: absolute;
+    right: -7%;
+    height: 38px;
+    padding: 0;
+    top: 7%;
+  }
+
+
+  /* footer */
+  footer {
+    display: flex;
+    padding-left: 30px;
+    margin-top: 25%;
+  }
+
+
+}
+
+
+/* desktop screen */
+@media screen and (min-width: 1025px) {
+  
+  .bg-tablet {
+    background-image: url(../desktop/image-host.jpg);
+    top: 10%;
+    background-size: contain;
+    padding: 400px 34%;
+  }
+
+  /* main */
+  main {
+    width: 675px;
+  }
+
+  /* footer */
+  footer {
+    justify-content: flex-end;
+    margin-top: -10%;
+  }
+
+}
